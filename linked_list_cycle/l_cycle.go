@@ -10,14 +10,14 @@ func hasCycle(head *ListNode) bool {
 		return false
 	}
 
-	l_map := map[*ListNode]bool{}
+	lMap := map[*ListNode]bool{}
 
 	for head != nil {
-		if _, ok := l_map[head]; ok {
+		if _, ok := lMap[head]; ok {
 			return true
 		}
 
-		l_map[head] = true
+		lMap[head] = true
 		head = head.Next
 	}
 
