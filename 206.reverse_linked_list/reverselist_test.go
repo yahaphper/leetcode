@@ -2,19 +2,20 @@ package reverse_linked_list
 
 import (
 	"fmt"
+	"leetcode/data_structure"
 	"testing"
 )
 
 func TestReverseList(t *testing.T) {
-	list := ListNode{
+	list := data_structure.ListNode{
 		Val: 1,
-		Next: &ListNode{
+		Next: &data_structure.ListNode{
 			Val: 2,
-			Next: &ListNode{
+			Next: &data_structure.ListNode{
 				Val: 3,
-				Next: &ListNode{
+				Next: &data_structure.ListNode{
 					Val: 4,
-					Next: &ListNode{
+					Next: &data_structure.ListNode{
 						Val:  5,
 						Next: nil,
 					},

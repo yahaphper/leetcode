@@ -1,21 +1,21 @@
 package linked_list_cycle
 
+import (
+	"leetcode/data_structure"
+)
+
 /*
 给定一个链表，判断链表中是否有环。
 */
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
 
 // 使用map进行判断
-func hasCycleOfMap(head *ListNode) bool {
+func hasCycleOfMap(head *data_structure.ListNode) bool {
 	if head == nil {
 		return false
 	}
 
-	m := map[*ListNode]bool{}
+	m := map[*data_structure.ListNode]bool{}
 
 	for head != nil {
 		if _, exist := m[head]; exist {
@@ -30,7 +30,7 @@ func hasCycleOfMap(head *ListNode) bool {
 }
 
 // 使用快慢指针
-func hasCycleOfSpeedAndPointer(head *ListNode) bool {
+func hasCycleOfSpeedAndPointer(head *data_structure.ListNode) bool {
 	if head == nil || head.Next == nil {
 		return false
 	}
