@@ -15,6 +15,7 @@ func swapPairsOfRecursion(head *data_structure.ListNode) *data_structure.ListNod
 	return next
 }
 
+// 迭代
 func swapPairsOfIteration(head *data_structure.ListNode) *data_structure.ListNode {
 	if head == nil || head.Next == nil {
 		return head
