@@ -11,5 +11,5 @@ func Test(t *testing.T) {
 		Val: 1,
 	}
 
-	fmt.Print(hasCycleOfSpeedAndPointer(&l1))
+	fmt.Print(hasCycleOfDoublePointer(&l1))
 }

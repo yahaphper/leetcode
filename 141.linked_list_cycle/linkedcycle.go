@@ -30,7 +30,7 @@ func hasCycleOfMap(head *data_structure.ListNode) bool {
 }
 
 // 使用快慢指针
-func hasCycleOfSpeedAndPointer(head *data_structure.ListNode) bool {
+func hasCycleOfDoublePointer(head *data_structure.ListNode) bool {
 	if head == nil || head.Next == nil {
 		return false
 	}

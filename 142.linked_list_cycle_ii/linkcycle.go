@@ -14,16 +14,41 @@ func detectCycleOfMap(head *data_structure.ListNode) *data_structure.ListNode {
 		return nil
 	}
 
-	m := map[*data_structure.ListNode]bool{}
+	m := map[*data_structure.ListNode]int8{}
 
 	for head != nil {
 		if _, exist := m[head]; exist {
 			return head
 		}
 
-		m[head] = true
+		m[head] = 1
 		head = head.Next
 	}
 
+	return nil
+}
+
+// 双指针
+func detectCycleOfDoublePointer(head *data_structure.ListNode) *data_structure.ListNode {
+	if head == nil || head.Next == nil {
+		return nil
+	}
+
+	fast := head
+	slow := head
+	for fast.Next != nil && fast.Next.Next != nil {
+		if fast.Next == nil {
+			return nil
+		}
+		slow = slow.Next
+		fast = fast.Next.Next
+		if fast == slow {
+			for head != fast {
+				head = head.Next
+				fast = fast.Next
+			}
+			return head
+		}
+	}
 	return nil
 }
